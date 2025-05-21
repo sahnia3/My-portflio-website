@@ -1,1 +1,4 @@
-# My-portflio-website
+
+# My Portfolio Website
+
+This is my awesome portfolio built with React/Next.js
