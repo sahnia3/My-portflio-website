@@ -1,4 +1,8 @@
+"use client";
+import React from "react";
 import { motion } from "framer-motion";
+
+// ... rest of your BlogPage component code
 
 const BlogPage = () => {
   return (
