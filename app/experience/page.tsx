@@ -77,7 +77,7 @@ const ExperiencePage = () => {
                     ))}
                   </ul>
                 </div>
-              </div>
+              </div> 
             ))}
           </div>
         </div>
