@@ -7,6 +7,22 @@ const ProjectsPage = () => {
 
   const projects = [
     {
+      title: "Flux Trading Platform",
+      company: "Financial Tech",
+      duration: "2025",
+      type: "Web",
+      description: "A high-frequency paper trading platform allowing users to simulate buying and selling of cryptocurrencies, stocks, futures, forex, and commodities.",
+      achievements: [
+        "Architected a comprehensive paper trading platform using Next.js and TypeScript for a seamless user experience",
+        "Implemented real-time market data feeds using WebSockets to ensure instant price updates and low-latency trading",
+        "Developed complex backend logic for order matching, portfolio valuation, and margin management",
+        "Integrated interactive charts and advanced search functionality to handle thousands of assets efficiently"
+      ],
+      technologies: ["Next.js", "TypeScript", "Tailwind CSS", "WebSockets", "PostgreSQL"],
+      github: "https://github.com/sahnia3/Flux-Trading",
+      link: "/projects/flux-trading"
+    },
+    {
       title: "Quantum Information Research",
       company: "STEM Research",
       duration: "2023",
@@ -36,19 +52,35 @@ const ProjectsPage = () => {
       github: "https://github.com/yourusername/shape-collision"
     },
     {
-      title: "Budget Tracker Application",
+      title: "Axesouar.in",
       company: "Web Development",
       duration: "2024",
       type: "Web",
-      description: "Full-stack expense tracker with SQLAlchemy and interactive visualizations.",
+      description: "Built a fully responsive e-commerce website using React.js to showcase 120+ unique jewelry SKUs.",
       achievements: [
-        "Designed and developed a full-stack expense tracker with Flask and SQLAlchemy",
-        "Built interactive dashboards using Chart.js for monthly and category-wise expense visualization",
-        "Enhanced user experience through a responsive UI using HTML, CSS, and Bootstrap",
-        "Achieved a 35% improvement in user satisfaction through dynamic visualizations"
+        "Designed and developed a full-stack e-commerce platform",
+        "Built interactive dashboards and product showcases",
+        "Enhanced user experience through a responsive UI",
+        "Achieved a significant improvement in user engagement"
       ],
-      technologies: ["Flask", "SQLAlchemy", "Chart.js", "Bootstrap"],
-      github: "https://github.com/yourusername/budget-tracker"
+      technologies: ["React.js", "Css", "JavaScript"],
+      github: "#", // Add link if available
+      link: "/projects/axesouar"
+    },
+    {
+      title: "Portfolio Website",
+      company: "Web Development",
+      duration: "2025",
+      type: "Web",
+      description: "A modern portfolio website built with Next.js, Framer Motion, and Tailwind CSS.",
+      achievements: [
+        "Designed a high-performance personal portfolio with immersive animations",
+        "Implemented responsive design for seamless mobile and desktop experience",
+        "Utilized modern web technologies for optimal performance"
+      ],
+      technologies: ["Next.js", "Framer Motion", "Tailwind CSS"],
+      github: "https://github.com/sahnia3/My-portflio-website",
+      link: "/projects/portfolio"
     },
     {
       title: "Emotion Detector Using Deep Learning",
@@ -74,17 +106,16 @@ const ProjectsPage = () => {
         <p className="text-gray-400 text-center mb-16">
           A showcase of my work across various technologies
         </p>
-        
+
         <div className="flex justify-center gap-4 mb-12 flex-wrap">
           {['All', 'Research', 'Software', 'Web', 'AI'].map((tab) => (
             <button
               key={tab}
               onClick={() => setActiveTab(tab)}
-              className={`px-6 py-2 rounded-full ${
-                activeTab === tab 
-                  ? 'bg-[#2A0E61] text-white' 
-                  : 'bg-[#03001417] text-gray-400'
-              } backdrop-blur-md transition-all`}
+              className={`px-6 py-2 rounded-full ${activeTab === tab
+                ? 'bg-[#2A0E61] text-white'
+                : 'bg-[#03001417] text-gray-400'
+                } backdrop-blur-md transition-all`}
             >
               {tab}
             </button>
@@ -92,15 +123,15 @@ const ProjectsPage = () => {
         </div>
 
         <div className="relative">
-          <div className="absolute left-1/2 transform -translate-x-1/2 h-full w-1 bg-gradient-to-b from-purple-500 to-cyan-500"/>
+          <div className="absolute left-1/2 transform -translate-x-1/2 h-full w-1 bg-gradient-to-b from-purple-500 to-cyan-500" />
           <div className="space-y-16">
             {projects
               .filter(proj => activeTab === 'All' || proj.type === activeTab)
               .map((proj, index) => (
                 <div key={index} className={`relative ${index % 2 === 0 ? 'ml-auto pl-8' : 'mr-auto pr-8'} w-1/2`}>
-                  <div className="absolute top-0 w-4 h-4 rounded-full bg-purple-500 left-[-8px]" 
-                       style={{ [index % 2 === 0 ? 'left' : 'right']: '-8px' }} />
-                  <div className="p-6 bg-[#1B1B1B] border-2 border-[#5656578b] rounded-lg shadow-[inset_0_0_10px_rgba(70,70,70,0.5)]">
+                  <div className="absolute top-0 w-4 h-4 rounded-full bg-purple-500 left-[-8px]"
+                    style={{ [index % 2 === 0 ? 'left' : 'right']: '-8px' }} />
+                  <div className="p-6 bg-[#1B1B1B] border-2 border-[#5656578b] rounded-lg shadow-[inset_0_0_10px_rgba(70,70,70,0.5)] hover:border-[#2A0E61] transition-colors duration-300">
                     <div className="flex justify-between items-start mb-4">
                       <h3 className="text-xl font-bold">{proj.title}</h3>
                       <span className="text-sm text-gray-400">{proj.duration}</span>
@@ -112,7 +143,7 @@ const ProjectsPage = () => {
                         <li key={i} className="text-gray-400 text-sm">{achievement}</li>
                       ))}
                     </ul>
-                    <div className="flex justify-between items-center mt-4">
+                    <div className="flex justify-between items-center mt-6 pt-4 border-t border-gray-700">
                       <div className="flex flex-wrap gap-2">
                         {proj.technologies.map((tech, i) => (
                           <span key={i} className="px-3 py-1 bg-[#2A0E61] rounded-full text-xs text-white">
@@ -120,14 +151,25 @@ const ProjectsPage = () => {
                           </span>
                         ))}
                       </div>
-                      <a 
-                        href={proj.github}
-                        target="_blank"
-                        rel="noopener noreferrer"
-                        className="p-2 bg-[#2A0E61] rounded-full hover:bg-purple-700 transition-colors"
-                      >
-                        <FaGithub size={20} />
-                      </a>
+                      <div className="flex gap-3">
+                        {/* @ts-ignore */}
+                        {proj.link && (
+                          <a
+                            href={proj.link}
+                            className="px-4 py-2 bg-[#2A0E61]/50 border border-[#2A0E61] rounded-lg text-sm hover:bg-[#2A0E61] transition-all"
+                          >
+                            View Project
+                          </a>
+                        )}
+                        <a
+                          href={proj.github}
+                          target="_blank"
+                          rel="noopener noreferrer"
+                          className="p-2 bg-[#2A0E61] rounded-full hover:bg-purple-700 transition-colors"
+                        >
+                          <FaGithub size={20} />
+                        </a>
+                      </div>
                     </div>
                   </div>
                 </div>

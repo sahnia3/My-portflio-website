@@ -11,7 +11,7 @@ const HeroHome = () => {
   };
 
   return (
-    <div className="flex flex-col md:flex-row items-center justify-between w-full min-h-screen px-4 md:px-20 gap-10">
+    <div className="flex flex-col md:flex-row items-center justify-between w-full min-h-screen px-4 md:px-20 gap-10 pt-32 md:pt-0">
       <div className="w-full md:w-1/2 text-white z-20 pointer-events-auto px-2 sm:px-6 md:px-0 md:pl-16 text-center md:text-left">
         <h1 className="text-4xl sm:text-5xl md:text-7xl font-bold mb-4 leading-tight">
           Hi, I&apos;m Aditya Sahni
@@ -30,8 +30,8 @@ const HeroHome = () => {
             View My Work →
           </button>
           <a
-            href="/resume.pdf"
-            download
+            href="/Aditya_Sahni_Resume.pdf"
+            download="Aditya_Sahni_Resume.pdf"
             className="px-6 py-3 border border-white text-white hover:bg-white/10 rounded-md cursor-pointer"
           >
             Resume
