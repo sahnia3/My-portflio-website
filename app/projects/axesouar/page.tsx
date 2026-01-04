@@ -49,7 +49,7 @@ const AxesouarPage = () => {
                             <li>Dynamic product catalog supporting 120+ unique items</li>
                             <li>Optimized image loading and caching for fast performance</li>
                             <li>Seamless intuitive navigation for enhanced user experience</li>
-                            <li>Custom styling to match the brand's aesthetic identity</li>
+                            <li>Custom styling to match the brand&apos;s aesthetic identity</li>
                         </ul>
                     </div>
                     <div className="p-6 bg-[#110d24] border border-[#2A0E61] rounded-xl">
