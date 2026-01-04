@@ -176,7 +176,7 @@ const FluxTradingPage = () => {
                                 Flux AI Lab
                             </h3>
                             <p className="text-gray-300 text-lg leading-relaxed">
-                                Experience the future of trading with our advanced AI Lab. Simulate specific market scenarios to test your strategies without risk. Stuck on a concept? Ask our AI chatbot anything about stocks, trends, or financial data—it's like having a 24/7 professional mentor by your side.
+                                Experience the future of trading with our advanced AI Lab. Simulate specific market scenarios to test your strategies without risk. Stuck on a concept? Ask our AI chatbot anything about stocks, trends, or financial data—it&apos;s like having a 24/7 professional mentor by your side.
                             </p>
                         </div>
                     </div>
@@ -238,7 +238,7 @@ const FluxTradingPage = () => {
                                 I architected the application using Next.js to leverage server-side rendering for the initial load and SEO. For the live market data, I integrated multiple financial APIs and utilized WebSockets to push real-time updates to the client. This ensures that the price charts and order boks are always synchronized with the global market.
                             </p>
                             <p className="mt-2">
-                                The backend handles the complex logic of order matching. When a user places a "Limit Order" or "Stop Loss", the server continuously monitors the price feed. Once the conditions are met, the order executes instantly, updating the user's portfolio balance and transaction history.
+                                The backend handles the complex logic of order matching. When a user places a &quot;Limit Order&quot; or &quot;Stop Loss&quot;, the server continuously monitors the price feed. Once the conditions are met, the order executes instantly, updating the user&apos;s portfolio balance and transaction history.
                             </p>
                         </section>
 
