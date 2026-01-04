@@ -35,9 +35,9 @@ const FluxTradingPage = () => {
                         <a href="https://github.com/sahnia3/Flux-Trading" target="_blank" rel="noopener noreferrer" className="flex items-center gap-2 px-6 py-3 bg-[#2A0E61] rounded-lg hover:bg-purple-700 transition-all font-semibold">
                             <FaGithub size={20} /> View Code
                         </a>
-                        <button className="flex items-center gap-2 px-6 py-3 border border-[#7042f88b] rounded-lg hover:bg-[#7042f88b]/10 transition-all font-semibold">
-                            <FaExternalLinkAlt size={18} /> Live Demo
-                        </button>
+                        <a href="https://flux-trading-klmw0ddei-aditya-sahnis-projects.vercel.app" target="_blank" rel="noopener noreferrer" className="flex items-center gap-2 px-6 py-3 border border-[#7042f88b] rounded-lg hover:bg-[#7042f88b]/10 transition-all font-semibold">
+                            <FaExternalLinkAlt size={18} /> View website
+                        </a>
                     </div>
                 </div>
 
