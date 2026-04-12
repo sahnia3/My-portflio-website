@@ -39,7 +39,7 @@ const HeroHome = () => {
         </div>
       </div>
 
-      <div className="relative w-64 h-64 sm:w-72 sm:h-72 md:w-[350px] md:h-[350px] lg:w-[400px] lg:h-[400px] flex-shrink-0">
+      <div className="relative w-64 h-64 sm:w-72 sm:h-72 md:w-[300px] md:h-[300px] lg:w-[350px] lg:h-[350px] flex-shrink-0 z-20">
         <Image
           src="/profile3.jpg"
           alt="Profile picture"
