@@ -11,8 +11,8 @@ const HeroHome = () => {
   };
 
   return (
-    <div className="flex flex-col md:flex-row items-center justify-between w-full min-h-screen px-4 md:px-20 gap-10 pt-32 md:pt-0">
-      <div className="w-full md:w-1/2 text-white z-20 pointer-events-auto px-2 sm:px-6 md:px-0 md:pl-16 text-center md:text-left">
+    <div className="flex flex-col md:flex-row items-center justify-between w-full max-w-7xl mx-auto min-h-screen px-4 md:px-20 gap-10 pt-32 md:pt-0">
+      <div className="w-full md:w-1/2 text-white z-20 pointer-events-auto px-2 sm:px-6 md:px-0 text-center md:text-left">
         <h1 className="text-4xl sm:text-5xl md:text-7xl font-bold mb-4 leading-tight">
           Hi, I&apos;m Aditya Sahni
         </h1>
@@ -39,13 +39,13 @@ const HeroHome = () => {
         </div>
       </div>
 
-      <div className="relative w-64 h-64 sm:w-72 sm:h-72 md:w-[350px] md:h-[350px] md:transform md:-translate-x-48 translate-x-0">
+      <div className="relative w-64 h-64 sm:w-72 sm:h-72 md:w-[350px] md:h-[350px] lg:w-[400px] lg:h-[400px] flex-shrink-0">
         <Image
           src="/profile3.jpg"
           alt="Profile picture"
           fill
           className="rounded-full object-cover border border-white/10 shadow-xl"
-          sizes="(max-width: 768px) 70vw, 350px"
+          sizes="(max-width: 768px) 70vw, 400px"
           priority
         />
       </div>

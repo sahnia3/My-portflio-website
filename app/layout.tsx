@@ -22,14 +22,16 @@ export default function RootLayout({
       <body>
         <main className="bg-[#030014] min-h-screen">
           <div className="relative">
-            <video
-              autoPlay
-              muted
-              loop
-              className="rotate-180 absolute top-[-340px] w-full object-cover z-[10]"
-            >
-              <source src="/blackhole.webm" type="video/webm" />
-            </video>
+            <div className="absolute top-0 left-0 w-full h-[30vw] overflow-hidden z-[10]">
+              <video
+                autoPlay
+                muted
+                loop
+                className="rotate-180 absolute left-0 w-full top-[-26vw]"
+              >
+                <source src="/blackhole.webm" type="video/webm" />
+              </video>
+            </div>
             <StarsCanvas />
             <Navbar />
             {children}
