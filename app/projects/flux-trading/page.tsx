@@ -14,7 +14,7 @@ const FluxTradingPage = () => {
     ];
 
     return (
-        <div className="relative min-h-screen text-white overflow-hidden z-[50] pt-32 pb-20 px-4 md:px-20 bg-[#030014]">
+        <div className="relative min-h-screen text-white overflow-hidden z-[30] pt-32 pb-20 px-4 md:px-20">
 
             {/* Background stars/effects can be added here if needed, or inherited from layout */}
 
@@ -185,7 +185,7 @@ const FluxTradingPage = () => {
 
                 {/* Technical Details Grid */}
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-10 mt-10">
-                    <div className="p-6 bg-[#110d24] border border-[#2A0E61] rounded-xl">
+                    <div className="p-6 bg-[#110d24]/90 backdrop-blur-sm border border-[#2A0E61] rounded-xl">
                         <h3 className="text-2xl font-bold mb-4 text-purple-400">Key Features</h3>
                         <ul className="list-disc list-inside space-y-3 text-gray-300">
                             <li>Real-time market data for simulated trading</li>
@@ -196,7 +196,7 @@ const FluxTradingPage = () => {
                             <li>Academy module for learning trading basics</li>
                         </ul>
                     </div>
-                    <div className="p-6 bg-[#110d24] border border-[#2A0E61] rounded-xl">
+                    <div className="p-6 bg-[#110d24]/90 backdrop-blur-sm border border-[#2A0E61] rounded-xl">
                         <h3 className="text-2xl font-bold mb-4 text-purple-400">Tech Stack</h3>
                         <div className="flex flex-wrap gap-3">
                             {["Next.js", "React", "TypeScript", "Tailwind CSS", "Node.js", "WebSockets", "Redux", "PostgreSQL"].map((tech) => (
@@ -212,7 +212,7 @@ const FluxTradingPage = () => {
                 </div>
 
                 {/* Detailed Description */}
-                <div className="mt-10 p-8 bg-[#0b0b0f] border border-[#2A0E61]/40 rounded-xl">
+                <div className="mt-10 p-8 bg-[#0b0b0f]/90 backdrop-blur-sm border border-[#2A0E61]/40 rounded-xl">
                     <h3 className="text-3xl font-bold mb-6 text-white bg-clip-text text-transparent bg-gradient-to-r from-purple-500 to-cyan-500">
                         In-Depth Project Detail
                     </h3>

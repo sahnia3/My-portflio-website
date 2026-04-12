@@ -179,7 +179,7 @@ const ProjectsPage = () => {
                 <div key={index} className={`relative ${index % 2 === 0 ? 'ml-auto pl-8' : 'mr-auto pr-8'} w-1/2`}>
                   <div className="absolute top-0 w-4 h-4 rounded-full bg-purple-500 left-[-8px]"
                     style={{ [index % 2 === 0 ? 'left' : 'right']: '-8px' }} />
-                  <div className="p-6 bg-[#1B1B1B] border-2 border-[#5656578b] rounded-lg shadow-[inset_0_0_10px_rgba(70,70,70,0.5)] hover:border-[#2A0E61] transition-colors duration-300">
+                  <div className="p-6 bg-[#1B1B1B]/80 backdrop-blur-sm border-2 border-[#5656578b] rounded-lg shadow-[inset_0_0_10px_rgba(70,70,70,0.5)] hover:border-[#2A0E61] transition-colors duration-300">
                     <div className="flex justify-between items-start mb-4">
                       <h3 className="text-xl font-bold">{proj.title}</h3>
                       <span className="text-sm text-gray-400">{proj.duration}</span>

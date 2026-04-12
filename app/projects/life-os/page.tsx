@@ -6,7 +6,7 @@ import { FaGithub } from "react-icons/fa";
 
 const LifeOSPage = () => {
     return (
-        <div className="relative min-h-screen text-white overflow-hidden z-[50] pt-32 pb-20 px-4 md:px-20 bg-[#030014]">
+        <div className="relative min-h-screen text-white overflow-hidden z-[30] pt-32 pb-20 px-4 md:px-20">
             <div className="max-w-7xl mx-auto flex flex-col gap-10">
 
                 {/* Header */}
@@ -118,7 +118,7 @@ const LifeOSPage = () => {
                         { name: "Telegram Bot", desc: "Mobile interface" },
                         { name: "Markets", desc: "Polymarket integration" },
                     ].map((mod) => (
-                        <div key={mod.name} className="p-4 bg-[#110d24] border border-[#2A0E61] rounded-xl text-center">
+                        <div key={mod.name} className="p-4 bg-[#110d24]/90 backdrop-blur-sm border border-[#2A0E61] rounded-xl text-center">
                             <div className="text-lg font-bold text-white">{mod.name}</div>
                             <div className="text-xs text-gray-400 mt-1">{mod.desc}</div>
                         </div>
@@ -127,7 +127,7 @@ const LifeOSPage = () => {
 
                 {/* Technical Details Grid */}
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-10 mt-10">
-                    <div className="p-6 bg-[#110d24] border border-[#2A0E61] rounded-xl">
+                    <div className="p-6 bg-[#110d24]/90 backdrop-blur-sm border border-[#2A0E61] rounded-xl">
                         <h3 className="text-2xl font-bold mb-4 text-purple-400">Key Features</h3>
                         <ul className="list-disc list-inside space-y-3 text-gray-300">
                             <li>8-module personal operating system architecture</li>
@@ -140,7 +140,7 @@ const LifeOSPage = () => {
                             <li>Telegram bot for mobile updates</li>
                         </ul>
                     </div>
-                    <div className="p-6 bg-[#110d24] border border-[#2A0E61] rounded-xl">
+                    <div className="p-6 bg-[#110d24]/90 backdrop-blur-sm border border-[#2A0E61] rounded-xl">
                         <h3 className="text-2xl font-bold mb-4 text-purple-400">Tech Stack</h3>
                         <div className="flex flex-wrap gap-3">
                             {["Next.js 16", "React 19", "TypeScript", "Supabase", "PostgreSQL", "Tailwind CSS", "Framer Motion", "Google OAuth", "Claude API", "Vercel"].map((tech) => (
@@ -156,7 +156,7 @@ const LifeOSPage = () => {
                 </div>
 
                 {/* In-Depth Detail */}
-                <div className="mt-10 p-8 bg-[#0b0b0f] border border-[#2A0E61]/40 rounded-xl">
+                <div className="mt-10 p-8 bg-[#0b0b0f]/90 backdrop-blur-sm border border-[#2A0E61]/40 rounded-xl">
                     <h3 className="text-3xl font-bold mb-6 text-transparent bg-clip-text bg-gradient-to-r from-purple-500 to-cyan-500">
                         In-Depth Project Detail
                     </h3>

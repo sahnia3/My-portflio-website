@@ -1,16 +1,24 @@
 "use client";
 
-import React, { useState, useRef, Suspense } from "react";
+import React, { useRef, Suspense, useMemo } from "react";
 import { Canvas, useFrame } from "@react-three/fiber";
 import { Points, PointMaterial, Preload } from "@react-three/drei";
-// @ts-ignore
-import * as random from "maath/random/dist/maath-random.esm";
+const generateStarPositions = (count: number, radius: number) => {
+  const positions = new Float32Array(count * 3);
+  for (let i = 0; i < count; i++) {
+    const r = radius * Math.cbrt(Math.random());
+    const theta = Math.random() * 2 * Math.PI;
+    const phi = Math.acos(2 * Math.random() - 1);
+    positions[i * 3] = r * Math.sin(phi) * Math.cos(theta);
+    positions[i * 3 + 1] = r * Math.sin(phi) * Math.sin(theta);
+    positions[i * 3 + 2] = r * Math.cos(phi);
+  }
+  return positions;
+};
 
 const StarBackground = (props: any) => {
   const ref: any = useRef();
-  const [sphere] = useState(() =>
-    random.inSphere(new Float32Array(5000), { radius: 1.2 })
-  );
+  const sphere = useMemo(() => generateStarPositions(1667, 1.2), []);
 
   useFrame((state, delta) => {
     ref.current.rotation.x -= delta/10;
@@ -24,15 +32,15 @@ const StarBackground = (props: any) => {
         ref={ref}
         positions={sphere}
         stride={3}
-        frustumCulled
+        frustumCulled={false}
         {...props}
         >
             <PointMaterial
                 transparent
-                color="$fff"
+                color="#fff"
                 size={0.002}
                 sizeAttenuation={true}
-                dethWrite={false}
+                depthWrite={false}
             />
         </Points>
     </group>
@@ -40,7 +48,7 @@ const StarBackground = (props: any) => {
 };
 
 const StarsCanvas = () => (
-    <div className="w-full h-auto fixed inset-0 z-[20]">
+    <div className="w-full h-auto fixed inset-0 z-[20] pointer-events-none">
         <Canvas camera={{position: [0, 0, 1]}}>
         <Suspense fallback={null}>
             <StarBackground />

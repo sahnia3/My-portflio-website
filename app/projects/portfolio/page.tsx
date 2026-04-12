@@ -6,7 +6,7 @@ import { FaGithub } from "react-icons/fa";
 
 const PortfolioPage = () => {
     return (
-        <div className="relative min-h-screen text-white overflow-hidden z-[50] pt-32 pb-20 px-4 md:px-20 bg-[#030014]">
+        <div className="relative min-h-screen text-white overflow-hidden z-[30] pt-32 pb-20 px-4 md:px-20">
 
             <div className="max-w-7xl mx-auto flex flex-col gap-10">
                 <Link href="/projects" className="text-gray-400 hover:text-white transition-colors w-fit">
@@ -40,7 +40,7 @@ const PortfolioPage = () => {
 
                 {/* Technical Details */}
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-10 mt-10">
-                    <div className="p-6 bg-[#110d24] border border-[#2A0E61] rounded-xl">
+                    <div className="p-6 bg-[#110d24]/90 backdrop-blur-sm border border-[#2A0E61] rounded-xl">
                         <h3 className="text-2xl font-bold mb-4 text-purple-400">Key Features</h3>
                         <ul className="list-disc list-inside space-y-3 text-gray-300">
                             <li>3D Space-themed background with particle effects</li>
@@ -50,7 +50,7 @@ const PortfolioPage = () => {
                             <li>Optimized performance with Next.js Server Components</li>
                         </ul>
                     </div>
-                    <div className="p-6 bg-[#110d24] border border-[#2A0E61] rounded-xl">
+                    <div className="p-6 bg-[#110d24]/90 backdrop-blur-sm border border-[#2A0E61] rounded-xl">
                         <h3 className="text-2xl font-bold mb-4 text-purple-400">Tech Stack</h3>
                         <div className="flex flex-wrap gap-3">
                             {["Next.js 14", "TypeScript", "Tailwind CSS", "Framer Motion", "Three.js"].map((tech) => (

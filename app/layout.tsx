@@ -26,7 +26,7 @@ export default function RootLayout({
               autoPlay
               muted
               loop
-              className="rotate-180 absolute top-[-640px] w-full object-cover" // Changed from top-[-440px] to top-[-540px]
+              className="rotate-180 absolute top-[-340px] w-full object-cover z-[10]"
             >
               <source src="/blackhole.webm" type="video/webm" />
             </video>

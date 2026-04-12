@@ -6,7 +6,7 @@ import { FaGithub } from "react-icons/fa";
 
 const PolymarketBotPage = () => {
     return (
-        <div className="relative min-h-screen text-white overflow-hidden z-[50] pt-32 pb-20 px-4 md:px-20 bg-[#030014]">
+        <div className="relative min-h-screen text-white overflow-hidden z-[30] pt-32 pb-20 px-4 md:px-20">
             <div className="max-w-7xl mx-auto flex flex-col gap-10">
 
                 {/* Header */}
@@ -93,7 +93,7 @@ const PolymarketBotPage = () => {
                         { value: "11", label: "Risk Checks" },
                         { value: "92", label: "Open Positions" },
                     ].map((stat) => (
-                        <div key={stat.label} className="p-6 bg-[#110d24] border border-[#2A0E61] rounded-xl text-center">
+                        <div key={stat.label} className="p-6 bg-[#110d24]/90 backdrop-blur-sm border border-[#2A0E61] rounded-xl text-center">
                             <div className="text-4xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-purple-500 to-cyan-500">
                                 {stat.value}
                             </div>
@@ -104,7 +104,7 @@ const PolymarketBotPage = () => {
 
                 {/* Technical Details Grid */}
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-10 mt-10">
-                    <div className="p-6 bg-[#110d24] border border-[#2A0E61] rounded-xl">
+                    <div className="p-6 bg-[#110d24]/90 backdrop-blur-sm border border-[#2A0E61] rounded-xl">
                         <h3 className="text-2xl font-bold mb-4 text-purple-400">Key Features</h3>
                         <ul className="list-disc list-inside space-y-3 text-gray-300">
                             <li>13-agent orchestration system powered by Claude</li>
@@ -116,7 +116,7 @@ const PolymarketBotPage = () => {
                             <li>Automated market scanning across 8 prediction categories</li>
                         </ul>
                     </div>
-                    <div className="p-6 bg-[#110d24] border border-[#2A0E61] rounded-xl">
+                    <div className="p-6 bg-[#110d24]/90 backdrop-blur-sm border border-[#2A0E61] rounded-xl">
                         <h3 className="text-2xl font-bold mb-4 text-purple-400">Tech Stack</h3>
                         <div className="flex flex-wrap gap-3">
                             {["Python 3.12", "Claude API", "Polymarket CLOB", "SQLite", "PostgreSQL", "Open-Meteo API", "GDELT", "Binance API", "Quarter-Kelly"].map((tech) => (
@@ -132,7 +132,7 @@ const PolymarketBotPage = () => {
                 </div>
 
                 {/* In-Depth Detail */}
-                <div className="mt-10 p-8 bg-[#0b0b0f] border border-[#2A0E61]/40 rounded-xl">
+                <div className="mt-10 p-8 bg-[#0b0b0f]/90 backdrop-blur-sm border border-[#2A0E61]/40 rounded-xl">
                     <h3 className="text-3xl font-bold mb-6 text-transparent bg-clip-text bg-gradient-to-r from-purple-500 to-cyan-500">
                         In-Depth Project Detail
                     </h3>
