@@ -12,24 +12,24 @@ const Projects = () => {
       </h1>
       <div className="h-full w-full flex flex-col md:flex-row gap-10 px-10">
         <ProjectCard
-          src="/flux-dashboard-main.png"
-          title="Flux Trading Platform"
-          description="A high-frequency paper trading platform for stocks, crypto, and forex. Features real-time data, news integration, and simulated trading."
-          link="/projects/flux-trading"
+          src="/maplerewards-optimizer.png"
+          title="MapleRewards"
+          description="The first native Canadian credit card rewards optimizer. Full-stack Go/Next.js platform with AI chat, trip planner, and portfolio analytics across 92+ cards."
+          link="/projects/maplerewards"
           className="w-full md:w-1/3"
         />
         <ProjectCard
-          src="/axesouar.png"
-          title="Axesouar.in"
-          description="Built a fully responsive e-commerce website using React.js to showcase 120+ unique jewelry SKUs, providing an intuitive browsing and shopping experience for customers."
-          link="/projects/axesouar"
+          src="/polymarket-main.png"
+          title="Polymarket Trading Agent"
+          description="Autonomous AI trading bot with 13-agent orchestration, 139-member weather ensemble, and 11 pre-trade risk checks for prediction market trading."
+          link="/projects/polymarket-bot"
           className="w-full md:w-1/3"
         />
         <ProjectCard
-          src="/spaceportfolio.png"
-          title="Portfolio Website"
-          description="A modern portfolio website built with Next.js, Framer Motion, and Tailwind CSS. Features smooth animations and a responsive design."
-          link="/projects/portfolio"
+          src="/lifeos-main.png"
+          title="Life-OS Dashboard"
+          description="Personal operating system with gamification — tracks tasks, fitness, habits, and ideas with XP progression, streak mechanics, and a Pomodoro timer."
+          link="/projects/life-os"
           className="w-full md:w-1/3"
         />
       </div>

@@ -7,6 +7,54 @@ const ProjectsPage = () => {
 
   const projects = [
     {
+      title: "MapleRewards",
+      company: "Fintech / SaaS",
+      duration: "2025 – 2026",
+      type: "Web",
+      description: "The first native Canadian credit card rewards optimizer — maximize cashback and points across 92+ cards and 19 loyalty programs.",
+      achievements: [
+        "Built full-stack platform with Go/Chi backend (35+ API endpoints) and Next.js frontend totaling 27,760 lines of code",
+        "Developed rewards optimization engine ranking cards by effective return per spending category with base and premium redemption values",
+        "Integrated AI chat assistant powered by Claude Sonnet for personalized rewards advice and trip planning",
+        "Designed portfolio analytics with fee ROI analysis, dollar-gap optimization, and wallet coverage scoring"
+      ],
+      technologies: ["Go", "PostgreSQL", "Redis", "Next.js", "TypeScript", "Claude API", "Stripe"],
+      github: "https://github.com/sahnia3/maplerewards",
+      link: "/projects/maplerewards"
+    },
+    {
+      title: "Polymarket Trading Agent",
+      company: "AI / Fintech",
+      duration: "2025 – 2026",
+      type: "AI",
+      description: "Autonomous prediction market trading agent with 13-agent AI orchestration and 139-member weather ensemble for probabilistic forecasting.",
+      achievements: [
+        "Built a 13-agent orchestration system (scanner, researchers, estimators, risk manager, trader) powered by Claude",
+        "Engineered a 139-member weather ensemble (GFS + ECMWF + ICON + GEM) for calibrated probabilistic forecasting",
+        "Implemented 11 pre-trade risk checks including drawdown heat, concentration limits, and correlation prevention",
+        "Developed Platt-calibrated multi-estimator system with quarter-Kelly position sizing across 92 open positions"
+      ],
+      technologies: ["Python", "Claude API", "Polymarket CLOB", "SQLite", "PostgreSQL", "Open-Meteo"],
+      github: "https://github.com/sahnia3/polymarket-agent",
+      link: "/projects/polymarket-bot"
+    },
+    {
+      title: "Life-OS Dashboard",
+      company: "Productivity / Full-Stack",
+      duration: "2026",
+      type: "Web",
+      description: "Centralized personal operating system with gamification — tracks tasks, fitness, habits, and ideas with XP progression and streak mechanics.",
+      achievements: [
+        "Architected 8-module system (tasks, fitness, habits, ideas, calendar, AI assistant, Telegram bot, markets)",
+        "Built Kanban task board, Pinterest-style ideas grid, and workout logging with GitHub-style heatmap visualization",
+        "Implemented gamification layer with XP, badges, streaks, energy-level tracking, and productivity correlation",
+        "Integrated Supabase real-time subscriptions, Google OAuth, and Pomodoro focus timer"
+      ],
+      technologies: ["Next.js", "TypeScript", "Supabase", "Tailwind CSS", "Framer Motion", "Claude API"],
+      github: "#",
+      link: "/projects/life-os"
+    },
+    {
       title: "Flux Trading Platform",
       company: "Financial Tech",
       duration: "2025",

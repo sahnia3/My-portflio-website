@@ -69,7 +69,7 @@ const PortfolioPage = () => {
                     <h3 className="text-3xl font-bold mb-6 text-white">Concept & Design</h3>
                     <div className="space-y-4 text-gray-300 leading-relaxed text-lg">
                         <p>
-                            I wanted my portfolio to be more than just a resume—it needed to be an experience. The "Black Hole" and space theme represents the infinite possibilities of technology and my deep curiosity about the unknown.
+                            I wanted my portfolio to be more than just a resume—it needed to be an experience. The &quot;Black Hole&quot; and space theme represents the infinite possibilities of technology and my deep curiosity about the unknown.
                         </p>
                         <p>
                             Every interaction is designed to feel smooth and purposeful. From the hero section animations to the project card hover effects, the goal was to create a memorable browsing experience that highlights my attention to detail and passion for frontend engineering.
