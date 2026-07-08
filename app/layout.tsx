@@ -1,43 +1,66 @@
 import type { Metadata } from "next";
-import { Inter } from "next/font/google";
+import { Anton, Inter, JetBrains_Mono, Space_Grotesk } from "next/font/google";
+import { Nav } from "@/components/nav";
+import { Footer } from "@/components/footer";
+import { CommandPalette } from "@/components/command-palette";
+import { Providers } from "@/components/providers";
+import { Backdrop } from "@/components/backdrop";
+import { ScrollProgress } from "@/components/scroll-progress";
+import { site } from "@/data/site";
 import "./globals.css";
-import StarsCanvas from "@/components/main/StarBackground";
-import Navbar from "@/components/main/Navbar";
-import Footer from "@/components/main/Footer";
 
-const inter = Inter({ subsets: ["latin"] });
+const spaceGrotesk = Space_Grotesk({
+  subsets: ["latin"],
+  variable: "--font-space-grotesk",
+});
+
+const inter = Inter({
+  subsets: ["latin"],
+  variable: "--font-inter",
+});
+
+const jetbrainsMono = JetBrains_Mono({
+  subsets: ["latin"],
+  variable: "--font-jetbrains-mono",
+});
+
+const anton = Anton({
+  weight: "400",
+  subsets: ["latin"],
+  variable: "--font-anton",
+});
 
 export const metadata: Metadata = {
-  title: "Aditya Sahni",
-  description: "This is my portfolio",
+  metadataBase: new URL("https://adityasahni.com"),
+  title: {
+    default: `${site.name} — ${site.role}`,
+    template: `%s — ${site.name}`,
+  },
+  description: site.intro,
+  openGraph: {
+    title: `${site.name} — ${site.role}`,
+    description: site.intro,
+    type: "website",
+    url: "https://adityasahni.com",
+  },
 };
 
 export default function RootLayout({
   children,
-}: {
-  children: React.ReactNode;
-}) {
+}: Readonly<{ children: React.ReactNode }>) {
   return (
-    <html lang="en">
-      <body>
-        <main className="bg-[#030014] min-h-screen">
-          <div className="relative">
-            <div className="absolute top-0 left-0 w-full h-[30vw] overflow-hidden z-[10]">
-              <video
-                autoPlay
-                muted
-                loop
-                className="rotate-180 absolute left-0 w-full top-[-26vw]"
-              >
-                <source src="/blackhole.webm" type="video/webm" />
-              </video>
-            </div>
-            <StarsCanvas />
-            <Navbar />
-            {children}
-            <Footer />
-          </div>
-        </main>
+    <html lang="en" data-scroll-behavior="smooth">
+      <body
+        className={`${spaceGrotesk.variable} ${inter.variable} ${jetbrainsMono.variable} ${anton.variable} grain`}
+      >
+        <Providers>
+          <Backdrop />
+          <ScrollProgress />
+          <Nav />
+          <CommandPalette />
+          <main className="min-h-screen overflow-x-clip">{children}</main>
+          <Footer />
+        </Providers>
       </body>
     </html>
   );
