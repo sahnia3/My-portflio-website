@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import Image from "next/image";
 import Link from "next/link";
 import { ArrowUpRight } from "lucide-react";
 import { CopyEmail } from "@/components/copy-email";
@@ -37,6 +38,15 @@ const work = [
       href: "https://brokerage-pulse-demo.vercel.app",
     },
     caseStudy: "/projects/sales-pulse",
+    image: {
+      src: "/salespulse-cdo-dark.png",
+      alt: "Sales Pulse national view: month-to-date totals and daily trend for every metric (demo data)",
+    },
+    quote: {
+      text: "Every morning our managers used to collect sales numbers over messages and spreadsheets. Now they open one page and the numbers are already there. The team uses it every working day.",
+      name: "Jaikumar Yadav",
+      role: "Head of Agency, IndiaFirst Life Insurance",
+    },
   },
   {
     client: "Axesouár, jewellery brand",
@@ -164,6 +174,42 @@ export default function ServicesPage() {
                   <p className="mt-4 max-w-2xl leading-relaxed text-muted">
                     {item.body}
                   </p>
+                  {item.quote && item.image && (
+                    <div className="mt-8 grid grid-cols-1 gap-8 md:grid-cols-2 md:items-center md:gap-12">
+                      <figure className="border-l-2 border-accent pl-5">
+                        <blockquote className="font-display text-xl leading-snug tracking-tight md:text-2xl">
+                          &ldquo;{item.quote.text}&rdquo;
+                        </blockquote>
+                        <figcaption className="mt-4 text-sm text-muted">
+                          {item.quote.name}, {item.quote.role}
+                          <span className="mt-4 block w-fit bg-white px-3 py-2">
+                            <Image
+                              src="/indiafirstlife-mark.png"
+                              alt="IndiaFirst Life logo"
+                              width={782}
+                              height={133}
+                              className="h-6 w-auto"
+                            />
+                          </span>
+                        </figcaption>
+                      </figure>
+                      <figure>
+                        <div className="overflow-hidden border border-line">
+                          <Image
+                            src={item.image.src}
+                            alt={item.image.alt}
+                            width={1440}
+                            height={1300}
+                            sizes="(min-width: 768px) 36rem, 100vw"
+                            className="h-auto w-full"
+                          />
+                        </div>
+                        <figcaption className="mt-2 text-xs text-faint">
+                          Screenshot shows demo data.
+                        </figcaption>
+                      </figure>
+                    </div>
+                  )}
                   {item.link && (
                     <a
                       href={item.link.href}
