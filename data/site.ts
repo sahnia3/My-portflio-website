@@ -579,5 +579,6 @@ export const navLinks = [
   { label: "Projects", href: "/projects" },
   { label: "Experience", href: "/experience" },
   { label: "About", href: "/about" },
+  { label: "Services", href: "/services" },
   { label: "Contact", href: "/contact" },
 ];
