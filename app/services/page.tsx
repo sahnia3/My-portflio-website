@@ -52,6 +52,31 @@ const work = [
   },
 ];
 
+const clients = ["IndiaFirst Life Insurance", "Axesouár", "SHE"];
+
+const faqs = [
+  {
+    q: "Do we have to replace the software we use now?",
+    a: "No. I build on top of the data you already keep, whether that is a spreadsheet, an export from your current system, or a form your team fills in.",
+  },
+  {
+    q: "What does it cost?",
+    a: "A fixed price agreed in writing before any work starts, then a flat monthly fee that covers hosting and changes. There is no hourly billing.",
+  },
+  {
+    q: "Who owns it?",
+    a: "You do. The data is yours and you can take it with you at any time.",
+  },
+  {
+    q: "What if it isn't what we wanted?",
+    a: "You see a working version with your own numbers early, and I adjust it until it fits how your team actually works.",
+  },
+  {
+    q: "Who will I be dealing with?",
+    a: "Me. I'm one developer, so the person you talk to is the person who builds it.",
+  },
+];
+
 const steps = [
   {
     title: "You tell me what eats your time",
@@ -80,7 +105,18 @@ export default function ServicesPage() {
           </>
         }
         subtitle="I'm an independent developer in Hamilton, Ontario. I replace the spreadsheets, group chats and hand-built reports a business runs on with one page that stays up to date."
-      />
+      >
+        <div className="mt-10 flex flex-wrap items-center gap-x-6 gap-y-2 border-t border-line pt-6">
+          <span className="text-xs uppercase tracking-[0.18em] text-faint">
+            Clients
+          </span>
+          {clients.map((name) => (
+            <span key={name} className="font-display text-base font-bold tracking-tight text-muted">
+              {name}
+            </span>
+          ))}
+        </div>
+      </PageHeader>
 
       <section className="mx-auto max-w-6xl px-5 py-16 md:px-8 md:py-24">
         <SectionHeading index="01" label="What I build" title="Three kinds of work" />
@@ -178,6 +214,26 @@ export default function ServicesPage() {
             </Reveal>
           ))}
         </ol>
+      </section>
+
+      <section className="border-t border-line bg-surface">
+        <div className="mx-auto max-w-6xl px-5 py-16 md:px-8 md:py-24">
+          <SectionHeading index="04" label="Questions" title="What owners ask first" />
+          <dl className="mt-12">
+            {faqs.map((item, i) => (
+              <Reveal key={item.q} delay={i * 0.05}>
+                <div className="grid grid-cols-1 gap-3 border-b border-line py-7 md:grid-cols-12 md:gap-8">
+                  <dt className="font-display text-xl font-bold tracking-tight md:col-span-5">
+                    {item.q}
+                  </dt>
+                  <dd className="max-w-xl leading-relaxed text-muted md:col-span-7">
+                    {item.a}
+                  </dd>
+                </div>
+              </Reveal>
+            ))}
+          </dl>
+        </div>
       </section>
 
       <section className="border-t border-line">
