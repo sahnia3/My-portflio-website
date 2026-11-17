@@ -45,18 +45,19 @@ export default function HomePage() {
                   AEON
                 </Link>
                 , a god simulator written from scratch with no game engine, and
-                running an autonomous{" "}
+                running{" "}
                 <Link
-                  href="/projects/polymarket-bot"
+                  href="/projects/sales-pulse"
                   className="border-b border-accent font-medium text-fg transition-colors duration-200 hover:text-accent"
                 >
-                  trading agent
-                </Link>{" "}
-                on live prediction markets.
+                  Sales Pulse
+                </Link>
+                , the daily sales dashboard IndiaFirst Life&apos;s agency team
+                uses every working day.
               </p>
               <p>
                 Computer Science at McMaster University (2027). Open to
-                freelance and collaboration.
+                full-time roles and client work.
               </p>
             </div>
           </div>

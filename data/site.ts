@@ -12,14 +12,14 @@ export const site: SiteConfig = {
   email: "sahni.aditya5096@gmail.com",
   headline: "I build systems that trade, optimize & keep score.",
   intro:
-    "Full-stack developer and CS undergrad at McMaster University. I ship end-to-end products — from a Go-powered Canadian rewards optimizer to an autonomous 13-agent prediction-market trader. Previously Software Engineer Co-op at TD Bank.",
+    "Full-stack developer and CS undergrad at McMaster University. I ship end-to-end products — a Go-powered Canadian rewards optimizer, a daily sales dashboard a national insurance sales team runs on, and an autonomous prediction-market trader. Previously Software Engineer Co-op at TD Bank.",
   currently: [
-    "building MapleRewards — 92+ cards, 19 loyalty programs",
-    "running 13 agents on Polymarket prediction markets",
+    "building MapleRewards — live at maplerewards.app",
+    "running Sales Pulse for IndiaFirst Life's sales team",
     "studying Computer Science @ McMaster University",
-    "shipping freelance web + AI projects",
+    "taking client work — reporting tools and websites",
   ],
-  availability: "Open to freelance & collaboration",
+  availability: "Open to full-time roles and client work",
   resume: "/Aditya_Sahni_Resume.pdf",
   socials: [
     { label: "GitHub", href: "https://github.com/sahnia3" },
@@ -89,6 +89,63 @@ export const projects: Project[] = [
       { src: "/maplerewards-live-optimizer.png", alt: "The Optimizer — best card for the next swipe, ranked in real CAD" },
     ],
     cover: "/maplerewards-live-home.png",
+  },
+  {
+    slug: "sales-pulse",
+    title: "Sales Pulse",
+    tagline:
+      "The daily sales dashboard IndiaFirst Life's agency channel runs on. Area heads commit targets each morning and report actuals each evening; the numbers roll up live through every level of the organization.",
+    year: "2026",
+    status: "live",
+    featured: true,
+    summary:
+      "Daily sales reporting for a national life insurer's agency channel — built solo, live in production, and used every working day by about 195 sales managers across four levels.",
+    metrics: [
+      { label: "Daily users", value: "195 managers" },
+      { label: "Org levels", value: "4, rolled up live" },
+      { label: "Tracked daily", value: "5 sales metrics" },
+      { label: "Security boundary", value: "Postgres RLS" },
+    ],
+    sections: [
+      {
+        heading: "The problem",
+        body: "Every morning the agency channel rolled its numbers up by hand. Each area head messaged figures to a regional head, who added them up in a spreadsheet and passed them on. It took about ninety minutes, and leadership saw reality a day late. Sales Pulse replaces that with one screen where every level sees the same numbers the moment they are entered.",
+      },
+      {
+        heading: "How it works",
+        body: "Each area head commits a target for five metrics in the morning. The commitment locks once saved and is blocked after a cutoff, so targets cannot be adjusted after the fact. In the evening they report actuals. Everything aggregates upward through the reporting tree with live achievement percentages, a run-rate projection for month end, and a second projection calibrated on each person's track record. Managers can drill from the national view down to a single area head's last seven days.",
+      },
+      {
+        heading: "Architecture",
+        body: "The frontend is a single hand-written page in vanilla JavaScript with no framework and no build step, installable as a PWA so it opens like an app on a phone. The backend is Supabase: Postgres, auth, and realtime subscriptions. Because the public key ships to the browser, row-level security is the entire security boundary. Every table is protected, and visibility is scoped to the reporting tree so a manager can only ever read their own branch.",
+      },
+      {
+        heading: "Shipping it for real",
+        body: "It started as a pilot with 29 people and went national. That meant migrating a full roster, working password-reset email through corporate mail filters, an admin panel, Excel exports, and an immutable audit log. Before a feature that let admins define new metrics went live, an adversarial review found eight bugs, including a stored XSS through metric labels. All were fixed before release.",
+      },
+    ],
+    stack: [
+      "JavaScript",
+      "Supabase",
+      "PostgreSQL",
+      "Row-level security",
+      "Realtime",
+      "PWA",
+      "Vercel",
+    ],
+    links: [
+      {
+        label: "Open a sample version",
+        href: "https://brokerage-pulse-demo.vercel.app",
+      },
+    ],
+    images: [
+      { src: "/salespulse-cdo-dark.png", alt: "National view: month-to-date totals and daily trend for every metric (demo data)" },
+      { src: "/salespulse-region.png", alt: "Regional head's view of every area head, ranked by achievement (demo data)" },
+      { src: "/salespulse-drill.png", alt: "Drill-down into one area head's month and last seven days (demo data)" },
+      { src: "/salespulse-plan.png", alt: "Monthly plan with a written rationale per metric (demo data)" },
+    ],
+    cover: "/salespulse-cdo-dark.png",
   },
   {
     slug: "polymarket-bot",
@@ -337,6 +394,78 @@ export const projects: Project[] = [
     cover: "/axesouar.png",
   },
   {
+    slug: "she",
+    title: "SHE",
+    tagline:
+      "The website for SHE (Shakti through Harmony and Empowerment), a women's movement rooted in culture, creativity, and community.",
+    year: "2026",
+    status: "live",
+    featured: false,
+    summary:
+      "Client website for a women's community movement: a custom identity in gold script and display caps, a founder page, events, and donations — designed, built, and launched in 2026.",
+    metrics: [
+      { label: "Type", value: "Client project" },
+      { label: "Pages", value: "6, prerendered" },
+      { label: "Design", value: "Custom, no template" },
+    ],
+    sections: [
+      {
+        heading: "The brief",
+        body: "SHE needed a site that felt like the movement itself: warm, ceremonial, and confident, not like a charity template. It had to introduce the founder, explain what SHE stands for, list events, and give people a clear way to donate.",
+      },
+      {
+        heading: "Design system",
+        body: "The identity pairs a gold script with large display capitals, a motif that repeats in every hero and call to action. A custom SVG logo, gold corner ornaments, and divider flourishes carry the look across pages, with scroll reveals kept slow and quiet so the site never feels busy.",
+      },
+      {
+        heading: "Working with a team",
+        body: "The site was built with an outside collaborator contributing through pull requests, with lint and build checks running on every change before it could merge. It deploys automatically from the main branch.",
+      },
+    ],
+    stack: ["Next.js", "TypeScript", "Tailwind CSS", "Framer Motion", "Vercel"],
+    links: [
+      { label: "Visit the site", href: "https://she-website-inky.vercel.app" },
+      { label: "GitHub", href: "https://github.com/sahnia3/she-website" },
+    ],
+    images: [{ src: "/she-home.png", alt: "SHE home page: where movement meets purpose" }],
+    cover: "/she-home.png",
+  },
+  {
+    slug: "foundry",
+    title: "FOUNDRY",
+    tagline:
+      "An autonomous coding engine that works through a graph of tasks on my own repositories overnight and reports back in the morning.",
+    year: "2026",
+    status: "in-development",
+    featured: false,
+    summary:
+      "A personal work-graph engine: tasks move through a typed pipeline from ready to verified to landed, each in its own git worktree, under strict usage limits.",
+    metrics: [
+      { label: "Runtime", value: "Node.js, no build step" },
+      { label: "Dependencies", value: "1" },
+      { label: "Work model", value: "Typed task graph" },
+      { label: "Isolation", value: "Git worktree per task" },
+    ],
+    sections: [
+      {
+        heading: "The idea",
+        body: "Most of the small jobs on a codebase are well defined and tedious: add a missing test, fix a lint rule, write the README section nobody wrote. FOUNDRY models that work as a graph of nodes and works through it unattended, opening its results as branches for review.",
+      },
+      {
+        heading: "How it runs",
+        body: "Each node moves through fixed states: ready, running, verifying, integrate, then landed or failed. A governor decides what may start based on usage windows and work-in-progress caps. An executor runs each task in an isolated git worktree, and a verification step has to pass before anything is integrated. New work is harvested from the filesystem and git history without spending a single model call.",
+      },
+      {
+        heading: "Guard rails",
+        body: "One module is the only writer to the database, so state can always be reconstructed. Every prompt is a versioned playbook, and the version is recorded on each node so a result can be traced to the exact instructions that produced it. A morning digest summarizes what landed and what failed.",
+      },
+    ],
+    stack: ["Node.js", "SQLite", "Git worktrees", "Claude Code"],
+    links: [],
+    images: [],
+    cover: undefined,
+  },
+  {
     slug: "portfolio",
     title: "This Website",
     tagline:
@@ -345,7 +474,7 @@ export const projects: Project[] = [
     status: "live",
     featured: false,
     summary:
-      "This site. A ground-up rebuild: data-driven pages, a ⌘K command palette, and a Swiss-modernist design system on warm paper — no templates.",
+      "This site. A ground-up rebuild: data-driven pages, a ⌘K command palette, and a cinematic scroll-driven design in ink black, cream, and emerald — no templates.",
     metrics: [
       { label: "Framework", value: "Next.js 16" },
       { label: "Styling", value: "Tailwind 4 (OKLCH)" },
@@ -355,7 +484,7 @@ export const projects: Project[] = [
     sections: [
       {
         heading: "Concept & design",
-        body: "A portfolio should read like a printed monograph of the work: warm paper surfaces, ink-black grotesque type at poster scale, hairline rules, and a single vermilion accent. The system borrows from Swiss modernist print design rather than from other websites. Every page renders from one typed data file, so content changes never touch layout code.",
+        body: "The site is built like a film title sequence: an ink-black ground, cream type at poster scale, hairline rules, and a single emerald accent. The hero is footage scrubbed frame by frame as you scroll. Every page renders from one typed data file, so content changes never touch layout code.",
       },
       {
         heading: "Mechanics",
@@ -412,6 +541,19 @@ export const labProjects = [
 ];
 
 export const experience: ExperienceEntry[] = [
+  {
+    company: "IndiaFirst Life Insurance",
+    role: "Software Developer — Sales Pulse (independent)",
+    period: "May 2026 — Present",
+    location: "Remote — Mumbai, India",
+    bullets: [
+      "Designed, built, and launched Sales Pulse, the daily sales-reporting dashboard for the agency channel, replacing a ninety-minute morning roll-up done over messages and spreadsheets.",
+      "Took it from a 29-person pilot to a national rollout: about 195 sales managers across four levels commit targets each morning and report actuals each evening.",
+      "Secured it with Postgres row-level security scoped to the reporting tree, so each manager can read only their own branch, backed by an immutable audit log.",
+      "Added month-end projections, drill-down from national to individual level, Excel exports, an admin panel, and realtime updates; ran an adversarial review that caught eight bugs before a major release.",
+    ],
+    stack: ["JavaScript", "Supabase", "PostgreSQL", "Row-level security", "Vercel"],
+  },
   {
     company: "TD Bank",
     role: "Software Engineer Co-op",
@@ -489,13 +631,13 @@ export const about = {
     "I'm someone who hates inefficiency. I see a manual process and immediately think: how do we automate this?",
   paragraphs: [
     "It started with a spreadsheet. I was tracking six credit cards and about 60,000 Aeroplan points by hand, trying to work out which card to swipe for what. No Canadian tool did the math, so I built one. That became MapleRewards, now live at maplerewards.app: the first native Canadian rewards optimizer, ranking 94 cards and 41 loyalty programs by real dollars returned.",
-    "That is the pattern for most of what I make. I hate inefficiency, so I build the thing that removes it. At TD Bank I found a manual data-entry process in security operations, rebuilt it in Power Automate, and cut the latency by 90 percent. When I got interested in prediction markets, I built an autonomous agent that trades them with real money and its own risk limits. When I wanted a world worth watching, I wrote a god simulator from scratch.",
+    "That is the pattern for most of what I make. I hate inefficiency, so I build the thing that removes it. At TD Bank I found a manual data-entry process in security operations, rebuilt it in Power Automate, and cut the latency by 90 percent. When a life insurer's sales team was rolling its numbers up over messages every morning, I built the dashboard that replaced it, and about 195 managers now use it every working day. When I got interested in prediction markets, I built an autonomous agent that trades them with real money and its own risk limits. When I wanted a world worth watching, I wrote a god simulator from scratch.",
     "Somewhere in there is the Computer Science degree at McMaster (Honours, minor in Statistics), but the credential is not the point. I reach for Go when performance matters and Next.js when iteration speed does, and I build the hard parts myself: a Raft consensus implementation, an audio-fingerprinting engine, a game engine with no engine. What I care about is shipping things real people use, and keeping them honest once they work.",
   ],
   principles: [
     {
       title: "Ship real products",
-      body: "Not demos, not screenshots. MapleRewards is live with real users; the trading agent runs on live markets. A thing that works in production teaches you more than ten that work in a slide.",
+      body: "Not demos, not screenshots. Sales Pulse is used by a national sales team every working day; MapleRewards is live at maplerewards.app. A thing that works in production teaches you more than ten that work in a slide.",
     },
     {
       title: "Causality over spectacle",
@@ -532,7 +674,7 @@ export const about = {
     { value: "90%", label: "manual latency cut at TD Bank" },
     { value: "94", label: "Canadian cards modelled, live" },
     { value: "60K", label: "Aeroplan points, tracked by hand" },
-    { value: "7", label: "projects shipped on GitHub" },
+    { value: "195", label: "sales managers on Sales Pulse, daily" },
   ],
   timeline: [
     {
@@ -562,8 +704,13 @@ export const about = {
     },
     {
       year: "2026",
+      title: "Sales Pulse, IndiaFirst Life",
+      body: "Built and launched the daily sales dashboard the agency channel runs on, from a 29-person pilot to a national rollout.",
+    },
+    {
+      year: "2026",
       title: "Looking ahead",
-      body: "Targeting a Fall 2026 co-op back in Ontario, taking freelance work in parallel, and hunting the next hard problem.",
+      body: "Open to full-time software roles in Ontario, taking client work in parallel, and hunting the next hard problem.",
     },
   ],
 };

@@ -5,7 +5,7 @@ import { animate, useInView } from "framer-motion";
 
 const STATS: { value: number; suffix?: string; label: string }[] = [
   { value: 94, label: "Canadian cards modelled — MapleRewards, live" },
-  { value: 13, label: "AI agents trading live prediction markets" },
+  { value: 195, label: "sales managers on Sales Pulse, every working day" },
   { value: 6687, label: "lines of hand-written game simulation" },
   { value: 41, suffix: "", label: "loyalty programs optimized in real CAD" },
 ];

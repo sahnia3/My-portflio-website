@@ -6,7 +6,7 @@ import { education, experience } from "@/data/site";
 export const metadata: Metadata = {
   title: "Experience",
   description:
-    "Software Engineer Co-op at TD Bank, freelance full-stack work, and healthcare platform development at DocOnline.",
+    "Sales Pulse for IndiaFirst Life, Software Engineer Co-op at TD Bank, freelance full-stack work, and healthcare platform development at DocOnline.",
 };
 
 export default function ExperiencePage() {

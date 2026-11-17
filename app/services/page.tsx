@@ -29,13 +29,14 @@ const offers = [
 
 const work = [
   {
-    client: "Life insurance sales team",
+    client: "IndiaFirst Life, agency sales team",
     title: "Sales Pulse",
     body: "Daily sales reporting used by 195 managers across four levels, every working day. It replaced a morning roll-up done over messages and spreadsheets.",
     link: {
       label: "Open a sample version",
       href: "https://brokerage-pulse-demo.vercel.app",
     },
+    caseStudy: "/projects/sales-pulse",
   },
   {
     client: "Axesouár, jewellery brand",
@@ -44,9 +45,10 @@ const work = [
     link: { label: "Visit axesouar.in", href: "https://axesouar.in" },
   },
   {
-    client: "SHE, non-profit",
+    client: "SHE, women's community movement",
     title: "Organization website",
-    body: "Designed, built and launched in 2026.",
+    body: "A custom identity, founder page, events and donations. Designed, built and launched in 2026.",
+    link: { label: "Visit the site", href: "https://she-website-inky.vercel.app" },
   },
 ];
 
@@ -136,6 +138,14 @@ export default function ServicesPage() {
                       {item.link.label}
                       <ArrowUpRight className="h-3.5 w-3.5 transition-transform duration-200 group-hover:-translate-y-0.5 group-hover:translate-x-0.5" />
                     </a>
+                  )}
+                  {item.caseStudy && (
+                    <Link
+                      href={item.caseStudy}
+                      className="mt-4 w-fit text-sm text-muted transition-colors duration-200 hover:text-accent"
+                    >
+                      Read the case study
+                    </Link>
                   )}
                 </article>
               </Reveal>

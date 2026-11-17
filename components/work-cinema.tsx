@@ -8,14 +8,14 @@ import { projects } from "@/data/site";
  * Selected work over the "closer" clip — three cards, one line each.
  */
 
-const PICKS = ["maplerewards", "aeon", "polymarket-bot"];
+const PICKS = ["maplerewards", "sales-pulse", "aeon"];
 
 const pitch: Record<string, string> = {
   maplerewards:
     "The first Canadian rewards optimizer — live, 94 cards, ranked in real dollars.",
   aeon: "A god simulator with no engine — every soul born, every empire earned.",
-  "polymarket-bot":
-    "13 AI agents trading live prediction markets. Net-positive realized P&L.",
+  "sales-pulse":
+    "The daily sales dashboard a national insurance team runs on. 195 managers, every working day.",
 };
 
 export function WorkCinema() {

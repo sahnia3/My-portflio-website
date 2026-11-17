@@ -8,7 +8,7 @@ import { labProjects, projects } from "@/data/site";
 export const metadata: Metadata = {
   title: "Projects",
   description:
-    "Case studies: MapleRewards, Polymarket Trading Agent, Life-OS, Flux Trading, and more — plus open-source and research work.",
+    "Case studies: MapleRewards, Sales Pulse, Polymarket Trading Agent, Life-OS, Flux Trading, and more — plus client, open-source and research work.",
 };
 
 export default function ProjectsPage() {
