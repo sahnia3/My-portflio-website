@@ -1,7 +1,7 @@
 import { Reveal } from "@/components/reveal";
 
 interface PageHeaderProps {
-  breadcrumb: string;
+  breadcrumb: React.ReactNode;
   title: React.ReactNode;
   subtitle?: string;
   children?: React.ReactNode;

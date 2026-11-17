@@ -3,6 +3,7 @@ import Image from "next/image";
 import Link from "next/link";
 import { ArrowUpRight } from "lucide-react";
 import { CopyEmail } from "@/components/copy-email";
+import { DaybookLogo } from "@/components/daybook-logo";
 import { PageHeader } from "@/components/page-header";
 import { Reveal } from "@/components/reveal";
 import { SectionHeading } from "@/components/section-heading";
@@ -11,6 +12,14 @@ export const metadata: Metadata = {
   title: "Daybook Software",
   description:
     "Daybook Software is Aditya Sahni, an independent developer in Hamilton, Ontario. Daily reporting pages, internal tools and websites for businesses that don't have a developer on staff.",
+  openGraph: {
+    title: "Daybook Software",
+    description:
+      "Daily reporting pages, internal tools and websites for businesses that don't have a developer on staff.",
+    url: "/services",
+    images: [{ url: "/daybook-banner.png", width: 1200, height: 630, alt: "Daybook Software: software for businesses without a developer" }],
+  },
+  twitter: { card: "summary_large_image", images: ["/daybook-banner.png"] },
 };
 
 const offers = [
@@ -106,7 +115,7 @@ export default function ServicesPage() {
   return (
     <>
       <PageHeader
-        breadcrumb="Daybook Software"
+        breadcrumb={<DaybookLogo />}
         title={
           <>
             Software for businesses
