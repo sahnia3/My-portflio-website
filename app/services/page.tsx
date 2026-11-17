@@ -7,9 +7,9 @@ import { Reveal } from "@/components/reveal";
 import { SectionHeading } from "@/components/section-heading";
 
 export const metadata: Metadata = {
-  title: "Services",
+  title: "Daybook Software",
   description:
-    "Independent developer in Hamilton, Ontario. Daily reporting pages, internal tools and websites for businesses that don't have a developer on staff.",
+    "Daybook Software is Aditya Sahni, an independent developer in Hamilton, Ontario. Daily reporting pages, internal tools and websites for businesses that don't have a developer on staff.",
 };
 
 const offers = [
@@ -73,7 +73,7 @@ const faqs = [
   },
   {
     q: "Who will I be dealing with?",
-    a: "Me. I'm one developer, so the person you talk to is the person who builds it.",
+    a: "Me, Aditya Sahni. Daybook Software is one developer, so the person you talk to is the person who builds it.",
   },
 ];
 
@@ -96,7 +96,7 @@ export default function ServicesPage() {
   return (
     <>
       <PageHeader
-        breadcrumb="Services"
+        breadcrumb="Daybook Software"
         title={
           <>
             Software for businesses
@@ -104,7 +104,7 @@ export default function ServicesPage() {
             without a <span className="text-accent">developer</span>.
           </>
         }
-        subtitle="I'm an independent developer in Hamilton, Ontario. I replace the spreadsheets, group chats and hand-built reports a business runs on with one page that stays up to date."
+        subtitle="Daybook Software is me, Aditya Sahni, an independent developer in Hamilton, Ontario. I replace the spreadsheets, group chats and hand-built reports a business runs on with one page that stays up to date."
       >
         <div className="mt-10 flex flex-wrap items-center gap-x-6 gap-y-2 border-t border-line pt-6">
           <span className="text-xs uppercase tracking-[0.18em] text-faint">
